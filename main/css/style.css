@@ -1,0 +1,576 @@
+/* ГЛАВНОЕ МЕНЮ */
+
+/* тёмный фон, центрирование сайта*/
+body {
+    background-color: #181818;
+    margin: auto;
+}
+
+
+@media(max-width:1200px){
+    .container{
+        width: 920px;
+    }
+}
+
+@media(max-width:920px){
+    .container{
+        width: 720px;
+    }
+}
+
+@media(max-width:720px){
+    .container{
+        width: 620px;
+    }
+}
+
+
+/* фиксируем размер, центрируем меню */
+.container {
+    max-width: 1900px;
+    min-height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    display:table;
+    justify-content: center;
+    align-items: center;
+}
+
+/* делаем размещение элементов по ширине */
+.header_warp {
+    width: 1200px;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* полоски-разделители */
+hr {
+    color: white;
+    opacity: 10%;
+    margin-top: 8px;
+}
+
+/* иконка и название сайта в строку */
+.header_icons {
+    display: inline-flex;
+}
+
+
+.header_name {
+    padding-left: 18px;
+    font-size: 18;
+}
+
+.register_logIn {
+    font-size: 16;
+    width: 170px;
+    height: 30px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.main_button1 {
+    width: 103px;
+    height: 30px;
+    background-color: #181818;
+    border-radius: 5px;
+    border: 0;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.main_button1:hover {
+    background-color: #242424;
+}
+
+.main_button2 {
+    width: 45px;
+    height: 30px;
+    background-color: #181818;
+    border-radius: 5px;
+    border: 0;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.main_button2:hover {
+    background-color: #242424;
+}
+
+
+/* параметры тега <a> основного контента */
+.main {
+    color: var(--White, #ECECEC);
+    /* width: 155px; */
+    /* height: 44px; */
+    /* left: 58px; */
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+}
+
+/* параметры "топ 20" */
+.top {
+    font-family: 'Inter', sans-serif;
+    font-size: 48px;
+    color: white;
+}
+
+/* кнопка "добавить обзор" */
+.button {
+    width: 199px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: orange;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.button:hover {
+    outline: 1px solid white;
+}
+
+/* параметры текста кнопки */
+.button p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: white;
+    padding: auto;
+    line-height: 10px;
+    padding-left: 10px;
+}
+
+/* внешние параметры каждой карточки с обзором */
+.card {
+    width: 224px;
+    height: 476px;
+    border-radius: 20px;
+    background-color: #242424;
+    margin-top: 20px;
+}
+
+/* параметры размещения для объектов внутри карточки */
+.warp {
+    max-width: 184px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+/* параметры текста <p> в карточке */
+.card p {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    max-height: 52px;
+    min-height: 52px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: white;
+    margin-top: 16px;
+    margin-bottom: 12px;
+    line-height: 26px;
+}
+
+/* параметры текста <a> в карточке */
+.card a {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: gray;
+    padding: auto;
+    line-height: 20px;
+}
+
+.card_img {
+    border-radius: 10px;
+}
+
+/* кнопка "подробнее" */
+.button_more {
+    width: 184px;
+    height: 44px;
+    border-radius: 10px;
+    background-color: #242424;
+    outline: 2px solid orange;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: orange;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.button_more:hover {
+    background-color: orange;
+    color: white;
+}
+
+/* кнопка "показать больше" */
+.button_show_more {
+    width: 1200px;
+    height: 44px;
+    border-radius: 10px;
+    background-color: #242424;
+    outline: 2px solid orange;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: orange;
+    margin-top: 40px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.button_show_more:hover {
+    background-color: orange;
+    color: white;
+}
+
+.gmail {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: orange;
+    padding: auto;
+    line-height: 20px;
+}
+
+.info {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: white;
+    padding: auto;
+    line-height: 20px;
+}
+
+
+/* ОКНО РЕГИСТРАЦИИ */
+
+
+.container2 {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-top: 5%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    /* display: none; */
+}
+
+#zatemnenie {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    display: none;
+    /* overflow: hidden; */
+}
+
+#okno {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 549px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    top: 12%;
+    /* позиционируем */
+    position: absolute;
+
+}
+
+#zatemnenie:target {
+    display: inline;
+    overflow: hidden;
+}
+
+
+.closed {
+    width: 560px;
+    height: 20px;
+    justify-content: right;
+    display: flex;
+    bottom: 2px;
+    position: relative;
+    padding-top: 10px;
+}
+
+.okno2.close {
+    width: 520px;
+    height: 20px;
+    padding: 0;
+    float: right;
+    cursor: pointer;
+}
+
+.close:hover {
+    background: #e6e6ff;
+}
+
+.okno2 .reg_log .log .close {
+    padding: 0;
+    float: right;
+    cursor: pointer;
+}
+
+.reg_log {
+    width: 443px;
+    height: 39px;
+    display: flex;
+    justify-content: space-between;
+    top: 25px;
+    position: inherit;
+    padding-top: 10px;
+}
+
+.reg_text {
+    color: #181818;
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    text-decoration: none;
+}
+
+.log_text {
+    color: #B9B9B9;
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    text-decoration: none;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.log_text:hover {
+    color: black;
+}
+
+.input_all {
+    width: 520px;
+    height: 210px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.input_name {
+    width: 520px;
+    height: 50px;
+}
+
+.input_name input {
+    width: 480px;
+    height: 50px;
+    border: 2px solid #B9B9B9;
+    border-radius: 10px;
+    padding: 0 20px 0 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    box-shadow: none;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;  
+    outline: none;
+}
+
+
+.input_other {
+    width: 520px;
+    height: 140px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.input_other input {
+    width: 210px;
+    height: 60px;
+    border-radius: 10px;
+    padding: 0 20px 0 20px;
+    border: 2px solid #B9B9B9;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+input[type=text]:focus {
+    border-color: orange;
+}
+
+.accord {
+    display: flex;
+    width: 397px;
+    height: 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+
+.check_mark {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    outline: 2px solid #B9B9B9;
+}
+
+.check1 {
+    color: black;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    padding-left: 12px;
+}
+
+.check2 {
+    color: orange;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    padding-left: 5px;
+}
+
+.reg_button {
+    width: 520px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: orange;
+    border: 0;
+    opacity: 0.3;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+
+a {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+.info {
+    width: 338px;
+    height: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.important {
+    color: #838383;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    padding-left: 12px;
+}
+
+/* логин */
+
+#zatemnenie2 {
+    background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    display: none;
+}
+
+#okno2 {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 349px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    top: 12%;
+    /* позиционируем */
+    position: absolute;
+}
+
+#zatemnenie2:target {
+    display: block;
+}
+
+
+.okno2 .close {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    float: right;
+    cursor: pointer;
+}
+
+.okno2 .close:hover {
+    background: #e6e6ff;
+}
+
+.input_other2 {
+    width: 520px;
+    height: 60px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input_other2 input {
+    width: 210px;
+    height: 60px;
+    border-radius: 10px;
+    padding: 0 20px 0 20px;
+    /* padding-right: 20px; */
+    border: 2px solid #B9B9B9;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+
+
+.container2 .header_warp .reg_log .reg .reg_text {
+    color: #B9B9B9;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.container2 .header_warp .reg_log .reg .reg_text:hover {
+    color: black;
+}
+
+.container2 .header_warp .reg_log .log .log_text {
+    color: #181818;
+}
+
+.container2 .header_warp .input {
+    height: 60px;
+}
